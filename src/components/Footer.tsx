@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslations } from '../i18n/utils';
 import type { ui } from '../i18n/ui';
+import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 export function Footer({ currentLang }: { currentLang: keyof typeof ui }) {
   const t = useTranslations(currentLang);
@@ -9,7 +10,7 @@ export function Footer({ currentLang }: { currentLang: keyof typeof ui }) {
   return (
     <footer className="bg-zinc-950 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Logo and Contact col */}
           <div className="col-span-1 md:col-span-1 flex flex-col items-start">
             <a href={`${basePath}/`} className="text-3xl font-black tracking-tight text-white mb-6">
@@ -24,52 +25,38 @@ export function Footer({ currentLang }: { currentLang: keyof typeof ui }) {
               <span className="text-sm">+123 456 7890</span>
             </div>
           </div>
-          
-          {/* Links cols */}
-          <div className="col-span-1 flex flex-col space-y-4">
-            <h4 className="text-lg font-bold mb-2">Menu</h4>
-            <a href={`${basePath}/`} className="text-zinc-400 hover:text-neon text-sm transition-colors">About</a>
-            <a href={`${basePath}/menu`} className="text-zinc-400 hover:text-neon text-sm transition-colors">Menu</a>
-            <a href={`${basePath}/contact`} className="text-zinc-400 hover:text-neon text-sm transition-colors">Contact Us</a>
-          </div>
 
-          <div className="col-span-1 flex flex-col space-y-4">
-            <h4 className="text-lg font-bold mb-2">Others</h4>
-            <a href="#" className="text-zinc-400 hover:text-neon text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-zinc-400 hover:text-neon text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-zinc-400 hover:text-neon text-sm transition-colors">Refund Policy</a>
-            <a href="#" className="text-zinc-400 hover:text-neon text-sm transition-colors">Careers</a>
-          </div>
-          
+          {/* Links cols */}
+
           {/* Open At col */}
           <div className="col-span-1 flex flex-col space-y-4">
-            <h4 className="text-lg font-bold mb-2">Open at</h4>
+            <h4 className="text-lg font-bold mb-2">{t('footer.openAt') as string}</h4>
             <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>Monday</span>
+              <span>{t('footer.days.monday') as string}</span>
               <span>10:30 - 21:00</span>
             </div>
             <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>Tuesday</span>
+              <span>{t('footer.days.tuesday') as string}</span>
               <span>10:30 - 21:00</span>
             </div>
             <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>Wednesday</span>
+              <span>{t('footer.days.wednesday') as string}</span>
               <span>10:30 - 21:00</span>
             </div>
             <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>Thursday</span>
+              <span>{t('footer.days.thursday') as string}</span>
               <span>10:30 - 21:00</span>
             </div>
             <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>Friday</span>
+              <span>{t('footer.days.friday') as string}</span>
               <span>10:00 - 22:00</span>
             </div>
             <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>Saturday</span>
+              <span>{t('footer.days.saturday') as string}</span>
               <span>10:00 - 22:00</span>
             </div>
             <div className="flex justify-between text-sm text-zinc-400">
-              <span>Sunday</span>
+              <span>{t('footer.days.sunday') as string}</span>
               <span>10:30 - 21:00</span>
             </div>
           </div>
@@ -77,13 +64,13 @@ export function Footer({ currentLang }: { currentLang: keyof typeof ui }) {
         
         <div className="mt-16 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center text-xs text-zinc-500">
           <div className="flex space-x-4 mb-4 md:mb-0">
-            <a href="#" className="hover:text-neon p-2 bg-zinc-900 rounded-full transition-colors">IG</a>
-            <a href="#" className="hover:text-neon p-2 bg-zinc-900 rounded-full transition-colors">FB</a>
-            <a href="#" className="hover:text-neon p-2 bg-zinc-900 rounded-full transition-colors">TW</a>
-            <a href="#" className="hover:text-neon p-2 bg-zinc-900 rounded-full transition-colors">YT</a>
+            <a href="#" className="hover:text-neon p-2 bg-zinc-900 rounded-full transition-colors flex items-center justify-center w-10 h-10"><FaInstagram size={18} /></a>
+            <a href="#" className="hover:text-neon p-2 bg-zinc-900 rounded-full transition-colors flex items-center justify-center w-10 h-10"><FaFacebookF size={18} /></a>
+            <a href="#" className="hover:text-neon p-2 bg-zinc-900 rounded-full transition-colors flex items-center justify-center w-10 h-10"><FaTwitter size={18} /></a>
+            <a href="#" className="hover:text-neon p-2 bg-zinc-900 rounded-full transition-colors flex items-center justify-center w-10 h-10"><FaYoutube size={18} /></a>
           </div>
           <p>
-            &copy; {new Date().getFullYear()} Maple Dine. {t('footer.rights')}
+            &copy; {new Date().getFullYear()} Maple Dine. {t('footer.rights') as string}
           </p>
         </div>
       </div>

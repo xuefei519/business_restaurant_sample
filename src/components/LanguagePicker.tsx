@@ -28,7 +28,7 @@ export function LanguagePicker({ currentLang, currentPath }: { currentLang: stri
             className={`px-3 py-1.5 text-xs font-semibold rounded-full transition-all duration-300 ease-in-out ${
               isActive 
                 ? 'bg-amber-500 text-white shadow-md transform scale-105' 
-                : 'text-zinc-700 hover:bg-zinc-100 hover:text-amber-600 dark:text-zinc-200 dark:hover:bg-zinc-800'
+                : 'text-white hover:bg-zinc-100 hover:text-amber-600 dark:text-zinc-200 dark:hover:bg-zinc-800'
             }`}
           >
             {label}
