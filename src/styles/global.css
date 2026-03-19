@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon: #ff5500;
+  --color-neon-hover: #e64d00;
+  --color-neon-light: #ff7733;
+}

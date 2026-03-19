@@ -1,0 +1,34 @@
+---
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
+import '../styles/global.css';
+import type { ui } from '../i18n/ui';
+
+interface Props {
+	title: string;
+	lang: keyof typeof ui;
+	isHome?: boolean;
+}
+
+const { title, lang, isHome = false } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 selection:bg-amber-500 selection:text-white">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro restaurant website" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="antialiased flex flex-col min-h-screen font-sans bg-zinc-50 dark:bg-zinc-950">
+		<Header client:load currentLang={lang} currentPath={currentPath} isHome={isHome} />
+		<main class="flex-grow">
+			<slot />
+		</main>
+		<Footer currentLang={lang} />
+	</body>
+</html>
