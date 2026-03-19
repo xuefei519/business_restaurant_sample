@@ -50,11 +50,17 @@ export function Header({ currentLang, currentPath, isHome = false }: { currentLa
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`md:hidden fixed inset-0 bg-zinc-950/95 backdrop-blur-xl z-40 transition-transform duration-300 flex flex-col items-center justify-center space-y-8 ${mobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}`}>
-        <a href={`${basePath}/`} onClick={() => setMobileMenuOpen(false)} className="text-2xl font-black text-white hover:text-neon transition-colors">{t('nav.home') as string}</a>
-        <a href={`${basePath}/menu`} onClick={() => setMobileMenuOpen(false)} className="text-2xl font-black text-white hover:text-neon transition-colors">{t('nav.menu') as string}</a>
-        <a href={`${basePath}/contact`} onClick={() => setMobileMenuOpen(false)} className="text-2xl font-black text-white hover:text-neon transition-colors">{t('nav.contact') as string}</a>
+      {/* Mobile Menu Dropdown */}
+      <div 
+        className={`md:hidden absolute top-full left-0 w-full bg-zinc-950 shadow-2xl border-t border-zinc-900 transition-all duration-300 overflow-hidden ${
+          mobileMenuOpen ? 'max-h-64 opacity-100 py-4' : 'max-h-0 opacity-0 py-0 pointer-events-none'
+        }`}
+      >
+        <div className="flex flex-col px-6 space-y-4">
+          <a href={`${basePath}/`} onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-amber-500 transition-colors">{t('nav.home') as string}</a>
+          <a href={`${basePath}/menu`} onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-amber-500 transition-colors">{t('nav.menu') as string}</a>
+          <a href={`${basePath}/contact`} onClick={() => setMobileMenuOpen(false)} className="text-lg font-bold text-white hover:text-amber-500 transition-colors">{t('nav.contact') as string}</a>
+        </div>
       </div>
     </header>
   );
