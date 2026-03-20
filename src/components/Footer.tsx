@@ -32,32 +32,12 @@ export function Footer({ currentLang }: { currentLang: keyof typeof ui }) {
           <div className="col-span-1 flex flex-col space-y-4">
             <h4 className="text-lg font-bold mb-2">{t('footer.openAt') as string}</h4>
             <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>{t('footer.days.monday') as string}</span>
-              <span>10:30 - 21:00</span>
+              <span>{t('hero.day1') as string}</span>
+              <span>{t('hero.hours') as string}</span>
             </div>
             <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>{t('footer.days.tuesday') as string}</span>
-              <span>10:30 - 21:00</span>
-            </div>
-            <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>{t('footer.days.wednesday') as string}</span>
-              <span>10:30 - 21:00</span>
-            </div>
-            <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>{t('footer.days.thursday') as string}</span>
-              <span>10:30 - 21:00</span>
-            </div>
-            <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>{t('footer.days.friday') as string}</span>
-              <span>10:00 - 22:00</span>
-            </div>
-            <div className="flex justify-between text-sm text-zinc-400 border-b border-zinc-800 pb-2">
-              <span>{t('footer.days.saturday') as string}</span>
-              <span>10:00 - 22:00</span>
-            </div>
-            <div className="flex justify-between text-sm text-zinc-400">
-              <span>{t('footer.days.sunday') as string}</span>
-              <span>10:30 - 21:00</span>
+                <span>{t('hero.day2') as string}</span>
+                <span>{t('hero.hours') as string}</span>
             </div>
           </div>
         </div>

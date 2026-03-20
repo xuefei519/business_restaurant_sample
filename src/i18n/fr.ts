@@ -6,7 +6,7 @@ export const fr = {
   'hero.subtitle': 'Vivez les saveurs réconfortantes du Canada et passez un moment inoubliable dans une expérience culinaire sans prétention chez Maple Dine.',
   'hero.day1': 'Lundi À Vendredi',
   'hero.day2': 'Samedi À Dimanche',
-  'hero.hours': '09H00-22H00',
+  'hero.hours': '09H00 - 22H00',
   'intro.title': 'Bienvenue chez Maple Dine, votre destination pour une cuisine canadienne authentique. Profitez d\'un voyage culinaire avec des plats comme la poutine classique et nos sandwichs à la viande fumée. Rejoignez-nous pour une expérience inoubliable où tradition rime avec saveur.',
   'stats.customers': 'Clients Satisfaits',
   'stats.menu': 'Menu',
@@ -15,16 +15,16 @@ export const fr = {
   'menu.subtitle': 'Découvrez une symphonie de goûts avec nos spécialités artisanales.',
   'menu.badge': 'Nouveaux Plats',
   'testimonial.quote': '"Maple Dine offre un incroyable goût du Canada ! La poutine et la viande fumée étaient parfaitement préparées. Je recommande vivement !"',
-  'testimonial.author': 'Ivan Gunawan (22 ans)',
+  'testimonial.author': 'Jane Doe',
   'discover.title': 'Découvrez la Saveur\nIntense',
   'discover.description': 'Explorez nos histoires riches sur notre héritage pour enrichir votre voyage culinaire et vos week-ends chez Maple Dine.',
   'contact.title': 'Contactez-nous',
   'contact.visit.title': 'Nous Rendre Visite',
-  'contact.visit.desc': '123 Avenue Culinaire\nQuartier Gastronomique, Paris 75001',
+  'contact.visit.desc': '123 Avenue Culinaire\nQuartier Gastronomique, QC H1H 3A3',
   'contact.hours.title': 'Horaires',
   'contact.hours.desc': 'Lun-Jeu: 17h - 22h\nVen-Dim: 16h - 23h',
   'contact.reservations.title': 'Réservations',
-  'contact.reservations.desc': 'Téléphone: 01 23 45 67 89\nEmail: reserve@mapledine.rest',
+  'contact.reservations.desc': 'Téléphone: (514) 123-4567\nEmail: reserve@mapledine.rest',
   'contact.form.name': 'Nom',
   'contact.form.email': 'Email',
   'contact.form.message': 'Message',
@@ -66,7 +66,7 @@ export const fr = {
       description: 'D\'épaisses tranches de bacon enrobées de semoule de maïs sur un pain kaiser moelleux.',
       price: '12$',
       rating: 4,
-      image: 'https://images.unsplash.com/photo-1616550796333-eadd0d24bf4c?auto=format&fit=crop&q=80&w=600'
+      image: 'https://images.unsplash.com/photo-1611605848036-382aa4335ded?auto=format&fit=crop&q=80&w=600'
     },
     {
       title: 'Saumon Glacé à l\'Érable',
@@ -80,7 +80,7 @@ export const fr = {
       description: 'Garniture douce et fondante cuite dans une croûte feuilletée. Un vrai classique canadien.',
       price: '8$',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1615569420042-32a823b18420?auto=format&fit=crop&q=80&w=600'
+      image: 'https://images.unsplash.com/photo-1649239702611-ebee87c0e537?auto=format&fit=crop&q=80&w=600'
     }
   ],
   'articles': [
